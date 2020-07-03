@@ -10,3 +10,4 @@ packer_compiled.*
 *.add.spl
 target/
 font_size.txt
+.vimwiki_tags
