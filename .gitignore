@@ -1,4 +1,3 @@
 .vimwiki_tags
 *.pyo
 __pycache__/
-jesseduffield/lazygit/state.yml
