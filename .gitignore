@@ -1,3 +1,8 @@
 .vimwiki_tags
 *.pyo
 __pycache__/
+*.zwc
+.zcompcache/
+.zcompdump
+.zhistory
+.zim/
