@@ -22,7 +22,7 @@ All are `Artist`, `Figure` create and possess `Axes`, `Axes` create and possess 
     line.remove()
     ```
     [helper method](http://inshallah.againxx.cn/matplotlib_axes_helper_methods.png) <br>
-    [axes attributes](http://inshallah.againxx.cn/Screenshot from 2022-10-19 12-24-45.png) <br>
+    [axes attributes](http://inshallah.againxx.cn/Screenshot\ from\ 2022-10-19\ 12-24-45.png) <br>
 3. `Axis`: Exact axis which provides ticks and tick labels to provide scales for data in `Axes`.
 4. `Artist`: Everything visible on the Figure is an Artist (even Figure, Axes, and Axis objects). This includes `Text`, `Line2D`, `collections`, `Patch` objects. 
 When the Figure is rendered, all of the Artists are drawn to the canvas. Most Artists are tied to an Axes; such an Artist cannot be shared by multiple Axes, or moved from one to another.
@@ -76,6 +76,7 @@ ax.set_title(r'$\sigma_i=15$')
 ```
 
 ### annotations
+add some annotation as specific place.
 ```python
 ax.annotate('local max', xy=(2, 1), xytext=(3, 1.5),
             arrowprops=dict(facecolor='black', shrink=0.05))
