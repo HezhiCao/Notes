@@ -4,3 +4,4 @@
 * [constant_memory](constant_memory.md)
 * [gpu_compilation](gpu_compilation.md)
 * [stream](stream.md)
+* [gpu介绍](GPU.md)

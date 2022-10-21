@@ -110,4 +110,12 @@ total = 10_100_000_000
 print(f'{total:,}') # 10,100,000,000
 print(f'{total:_}') # 10_100_000_000
 print(f'{total=}') # total=10100000000, since python3.8
+
+var = 1
+print(f"{var:>5}") # "    1"
+print(f"{var:<5}") # "1    "
+print(f"{var:0>5}") # "00001"
+print(f"{var:05}") # "00001"
+print("{1:04} {0:1>4}".format(2, 3)) #" 0003 1112"
+print(f"{var: .2f}") # "1.00"
 ```
