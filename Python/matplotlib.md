@@ -3,6 +3,9 @@
 ## Layers
 1. Backend Layer: 
     - FigureCanvas: Defines the **area** on which the figure is drawn.
+        - `.flush_events()`: Flush the GUI events for the figure.
+        - `.draw()`: Render the `Figure`. This method will walk the `Artist` tree.
+        - `.print_jpeg(filename, *args)`, `.print_jpg(filename, *args)`, `.print_png(filename, *args)`, `.print_rgba(filename, *args)`...
     - Renderer: The tool to **draw** on FigureCanvas.
     - Event: Handles user inputs from keyboard and mouse.
 2. Artist Layer: `Artist` is the object that knows how to use a `Renderer` to paint on canvas. The `Artist` handles all the high level constructs like representing and laying out the figure, text, and lines. `Figure` is the main Artist object that holds everything together. 
@@ -22,7 +25,7 @@ All are `Artist`, `Figure` create and possess `Axes`, `Axes` create and possess 
     line.remove()
     ```
     [helper method](http://inshallah.againxx.cn/matplotlib_axes_helper_methods.png) <br>
-    [axes attributes](http://inshallah.againxx.cn/Screenshot\ from\ 2022-10-19\ 12-24-45.png) <br>
+    [axes attributes](http://inshallah.againxx.cn/matplotlib_Axes_attribute.png) <br>
 3. `Axis`: Exact axis which provides ticks and tick labels to provide scales for data in `Axes`.
 4. `Artist`: Everything visible on the Figure is an Artist (even Figure, Axes, and Axis objects). This includes `Text`, `Line2D`, `collections`, `Patch` objects. 
 When the Figure is rendered, all of the Artists are drawn to the canvas. Most Artists are tied to an Axes; such an Artist cannot be shared by multiple Axes, or moved from one to another.
@@ -80,4 +83,11 @@ add some annotation as specific place.
 ```python
 ax.annotate('local max', xy=(2, 1), xytext=(3, 1.5),
             arrowprops=dict(facecolor='black', shrink=0.05))
+```
+
+### set property for an `Artist`
+```
+x = arange(0, 1, 0.01)
+lines = plot(x, sin(2*pi*x), x, sin(4*pi*x))
+plt.setp(lines, linewidth=2, color='r')
 ```

@@ -1,6 +1,7 @@
 # LinuxShell
 
 * [apt](apt.md)
+* [awk](awk.md)
 * [array](array.md)
 * [bracket parenthesis](bracket_parenthesis.md)
 * [fc](fc.md)
@@ -33,3 +34,4 @@
 * [quoting](quoting.md)
 * [dmesg](dmesg.md)
 * [file system hierarchy](file_system_hierarchy.md)
+* [XDG_basic_directory](XDG_basic_directory.md)

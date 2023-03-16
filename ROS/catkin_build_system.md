@@ -4,9 +4,8 @@
 ### Why need catkin_make?
 * In order to efficiently build numerous inter-dependent, but separately developed, CMake projects.
 * ROS has a distributed development model with many modular projects.
-* Catkin can merged numerous disparate projects so that they utilize a single target dependency tree and build space.
-* A workspace’s source space contains boilerplate “top-level” CMakeLists.txt which automatically added all of the Catkin CMake projects below it
-  to the single large CMake project
+* Catkin can merge numerous disparate projects so that they utilize a single target dependency tree and build space.
+* A workspace’s source space contains boilerplate “top-level” CMakeLists.txt which automatically added all of the Catkin CMake projects below it to the single large CMake project
 
 ### Flaw of catkin_make
 * Modification of one CMakeLists will reconfigure all other packages
@@ -14,7 +13,7 @@
     - Packages might have colliding target names
     - One package defines variables needed by another one
     - Depend on order in which independent packages are built
-* Requires developers to specify explicit dependencies on some targets inside of their dependencies
+* Requires developers to specify explicit dependencies on some targets inside their dependencies
 * It can only work on a homogeneous workspace consisting only of Catkin CMake packages.
     - Other types of packages like plain CMake packages and autotools packages cannot be integrated into a single configuration and a single build step
 
